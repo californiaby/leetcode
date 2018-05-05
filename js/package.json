@@ -1,0 +1,29 @@
+{
+  "name": "js",
+  "version": "0.0.1",
+  "description": "leetcode",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/californiaby/leetcode.git"
+  },
+  "keywords": [
+    "leetcode",
+    "js"
+  ],
+  "author": "californiaby",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/californiaby/leetcode/issues"
+  },
+  "homepage": "https://github.com/californiaby/leetcode#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint-config-google": "^0.9.1",
+    "eslint-plugin-jest": "^21.15.1",
+    "jest": "^22.4.3"
+  }
+}
