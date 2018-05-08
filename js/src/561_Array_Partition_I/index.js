@@ -1,5 +1,7 @@
 'use strict';
 
+/* eslint-disable no-unused-vars */
+
 /**
  * Bubble sorting. Modifies array.
  * @param {*} arr to be sorted
