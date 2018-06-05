@@ -10,7 +10,7 @@ public class Solution {
   public int findLUSlength (String a, String b) {
 
     // If strings are equal - there's no uncommon subsequence
-    if (a.equals(b)) { return 0; }
+    if (a.equals(b)) { return -1; }
 
     // If strings have same length and not equal - any is the longest uncommon subsequence
     if (a.length() == b.length() && !a.equals(b)) { return a.length(); }
