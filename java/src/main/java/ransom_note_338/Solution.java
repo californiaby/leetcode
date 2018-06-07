@@ -23,8 +23,8 @@ public class Solution {
 
   public boolean canConstruct(String ransomNote, String magazine) {
 
-    if (ransomNote.length() > magazine.length() || magazine.length() == 0) return false;
-    if (ransomNote.length() == 0) return true;
+    if (ransomNote.length() > magazine.length()) return false;
+    if (ransomNote.length() == 0 || magazine.length() == 0) return true;
 
     // if letters are only ASCII - we can use arr[128] to store count of letters in magazine
     // for flexibility - use map and count letters
@@ -49,5 +49,7 @@ public class Solution {
 
     return true;
   }
+
+  // TODO: solution with int[]
 
 }
