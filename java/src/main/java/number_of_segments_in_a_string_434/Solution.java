@@ -22,9 +22,13 @@ public class Solution {
     if (str.equals("")) return 1;
 
     // Split str via regex with whitespaces
-    String[] arr = str.split("\\s");
+    String[] arr = str.split("\\s+");
 
     return arr.length;
   }
+
+  // Solution #2
+  // iterate through string
+  // if(i==0 || (s.charAt(i)!=' ' && s.charAt(i-1)==' ')) { res++; }
 
 }

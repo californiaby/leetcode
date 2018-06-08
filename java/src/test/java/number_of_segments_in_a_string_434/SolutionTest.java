@@ -22,4 +22,9 @@ public class SolutionTest {
   public void testEmpty() {
     assertEquals(1, solution.countSegments(""));
   }
+
+  @Test
+  public void testWeird() {
+    assertEquals(6, solution.countSegments(", , , ,        a, eaefa"));
+  }
 }
