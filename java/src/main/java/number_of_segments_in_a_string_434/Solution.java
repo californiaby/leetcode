@@ -19,7 +19,7 @@ public class Solution {
 
     // Remove leading and trailing whitespaces
     String str = s.trim();
-    if (str == "") return 0;
+    if (str.equals("")) return 1;
 
     // Split str via regex with whitespaces
     String[] arr = str.split("\\s");

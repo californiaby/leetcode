@@ -12,4 +12,14 @@ public class SolutionTest {
   public void countSegments() {
     assertEquals(5, solution.countSegments("Hello, my, name is Jack!"));
   }
+
+  @Test
+  public void testSpaces() {
+    assertEquals(5, solution.countSegments("   Hello, my, name is Jack!   "));
+  }
+
+  @Test
+  public void testEmpty() {
+    assertEquals(1, solution.countSegments(""));
+  }
 }
