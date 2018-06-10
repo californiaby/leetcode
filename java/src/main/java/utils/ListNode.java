@@ -8,8 +8,10 @@ public class ListNode {
     data = x;
   }
 
-  public String toString(ListNode n) {
+  public String toString() {
     String s = "";
+    ListNode n = this;
+
     while (n != null) {
       s += (n.data + " ");
       n = n.next;
