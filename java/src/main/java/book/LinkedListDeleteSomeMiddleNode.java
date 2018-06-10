@@ -14,9 +14,9 @@ public class LinkedListDeleteSomeMiddleNode {
   public void deleteSomeMiddle(ListNode n) {
     // x > | a > y
     // x > | y
-    // As we don't have access to previous node, solution is to copy data of next node to current and update links.
+    // As we don't have access to previous node, solution is to copy val of next node to current and update links.
 
-    n.data = n.next.data;
+    n.val = n.next.val;
     n.next = n.next.next;
   }
 

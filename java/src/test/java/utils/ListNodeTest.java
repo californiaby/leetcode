@@ -10,7 +10,7 @@ public class ListNodeTest {
   public void test_createLinkedList() {
     ListNode node = new ListNode(1);
 
-    assertEquals(1, node.data);
+    assertEquals(1, node.val);
     assertEquals(null, node.next);
   }
 
@@ -19,10 +19,10 @@ public class ListNodeTest {
     ListNode node = new ListNode(1);
     node.add(4).add(5).add(8);
 
-    assertEquals(1, node.data);
-    assertEquals(4, node.next.data);
-    assertEquals(5, node.next.next.data);
-    assertEquals(8, node.next.next.next.data);
+    assertEquals(1, node.val);
+    assertEquals(4, node.next.val);
+    assertEquals(5, node.next.next.val);
+    assertEquals(8, node.next.next.next.val);
   }
 
   @Test
@@ -30,9 +30,9 @@ public class ListNodeTest {
     ListNode node = new ListNode(1);
     node.add(4).add(5).add(8).delete(5).add(11);
 
-    assertEquals(1, node.data);
-    assertEquals(4, node.next.data);
-    assertEquals(8, node.next.next.data);
-    assertEquals(11, node.next.next.next.data);
+    assertEquals(1, node.val);
+    assertEquals(4, node.next.val);
+    assertEquals(8, node.next.next.val);
+    assertEquals(11, node.next.next.next.val);
   }
 }

@@ -1,11 +1,11 @@
 package utils;
 
 public class ListNode {
-  public int data;
+  public int val;
   public ListNode next;
 
   public ListNode (int x) {
-    data = x;
+    val = x;
   }
 
   public String toString() {
@@ -13,7 +13,7 @@ public class ListNode {
     ListNode n = this;
 
     while (n != null) {
-      s += (n.data + " ");
+      s += (n.val + " ");
       n = n.next;
     }
     return s;
@@ -42,12 +42,12 @@ public class ListNode {
   public ListNode delete(int x) {
     ListNode n = this;
 
-    if (n.data == x) {
+    if (n.val == x) {
       return n.next;
     }
 
     while (n.next != null) {
-      if (n.next.data == x) {
+      if (n.next.val == x) {
         n.next = n.next.next;
         return this;
       }

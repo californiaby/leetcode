@@ -15,10 +15,10 @@ public class LinkedListRemoveDups {
     ListNode previous = null;
 
     while (n != null) {
-      if (set.contains(n.data)) {
+      if (set.contains(n.val)) {
         previous.next = n.next;
       } else {
-        set.add(n.data);
+        set.add(n.val);
         previous = n;
       }
       n = n.next;
