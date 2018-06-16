@@ -4,6 +4,12 @@ import utils.ListNode;
 
 public class LinkedListSum {
 
+  /**
+   * Gets sum of two linked lists that represent REVERSE number.
+   * @param l1 6 > 2 > 3: 326
+   * @param l2 7 > 3 > 1: 137
+   * @return sum: 326 + 127 == 453 : 3 > 5 > 4
+   */
   public ListNode getSum(ListNode l1, ListNode l2) {
 
     // 7 > 1 > 6 : 617
