@@ -24,14 +24,14 @@ public class Solution {
 
     // generate stack
     for (String s : ops) {
-      if (s == "+") {
+      if (s.equals("+")) {
         int top = stack.pop();
         int newTop = top + stack.peek();
         stack.push(top);
         stack.push(newTop);
-      } else if (s == "C") {
+      } else if (s.equals("C")) {
         stack.pop();
-      } else if (s == "D") {
+      } else if (s.equals("D")) {
         stack.push(2 * stack.peek());
       } else {
         int val = Integer.valueOf(s);
