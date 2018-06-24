@@ -20,6 +20,6 @@ public class SolutionTest {
     tree.left.left.right.right.addLeft(13);
     tree.right.addLeft(35).addRight(55);
 
-    TreeNode test = solution.trim(tree, 13, 36);
+    TreeNode test = solution.trimBST(tree, 13, 36);
   }
 }
