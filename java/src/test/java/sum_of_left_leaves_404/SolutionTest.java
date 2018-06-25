@@ -13,7 +13,5 @@ public class SolutionTest {
   public void sumOfLeftLeaves() {
     TreeNode tree = new TreeNode(1).addLeft(2).addRight(3);
     tree.left.addLeft(4).addRight(5);
-
-    assertEquals();
   }
 }
