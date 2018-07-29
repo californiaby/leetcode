@@ -1,4 +1,4 @@
-package add_two_numbers_2;
+package Add_Two_Numbers_2;
 
 /*
 You are given two non-empty linked lists representing two non-negative integers.
@@ -17,27 +17,35 @@ public class Solution {
 
   public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
 
+    // Check if one of lists is empty
     if (l1 == null) return l2;
     if (l2 == null) return l1;
 
-    ListNode dummyHead = new ListNode(0);
-    ListNode curr = dummyHead;
+    // Create dummyHead which will point to real head as next
+    ListNode dummyHead = new ListNode(-1);
+    ListNode current = dummyHead;
     int carry = 0;
 
+    // Iterate through lists
     while (l1 != null || l2 != null) {
+
+      // Get values of current nodes and sum
       int a = l1 != null ? l1.val : 0;
       int b = l2 != null ? l2.val : 0;
       int sum = a + b + carry;
+
+      // Create new node with sum, move pointer and update carry
       carry = sum / 10;
-      curr.next = new ListNode(sum % 10);
-      curr = curr.next;
+      current.next = new ListNode(sum % 10);
+      current = current.next;
+
+      // Iterate, double check that there's next
       if (l1 != null) l1 = l1.next;
       if (l2 != null) l2 = l2.next;
     }
 
-    if (carry > 0) {
-      curr.next = new ListNode(carry);
-    }
+    // If end of lists reached but there's still a carry - add one more node
+    if (carry > 0) current.next = new ListNode(carry);
 
     return dummyHead.next;
   }

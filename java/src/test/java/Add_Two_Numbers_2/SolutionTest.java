@@ -1,4 +1,4 @@
-package add_two_numbers_2;
+package Add_Two_Numbers_2;
 
 import org.junit.Test;
 import utils.ListNode;
