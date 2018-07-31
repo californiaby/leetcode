@@ -1,4 +1,4 @@
-package reverse_linked_list_206;
+package Reverse_Linked_List_206;
 
 import org.junit.Test;
 import utils.ListNode;
