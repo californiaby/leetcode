@@ -1,4 +1,4 @@
-package merge_two_sorted_lists_21;
+package Merge_Two_Sorted_Lists_21;
 
 import org.junit.Test;
 import utils.ListNode;

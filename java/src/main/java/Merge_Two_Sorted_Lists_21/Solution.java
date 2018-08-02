@@ -1,13 +1,10 @@
-package merge_two_sorted_lists_21;
+package Merge_Two_Sorted_Lists_21;
 
 import utils.ListNode;
 
 public class Solution {
 
   public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
-
-    // 1 > 2 > 4
-    // 1 > 3 > 4
 
     if (l1 == null) return l2;
     if (l2 == null) return l1;
