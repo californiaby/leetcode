@@ -1,4 +1,4 @@
-package valid_parentheses_20;
+package Valid_Parentheses_20;
 
 /*
 Given a string containing just the characters '(', ')', '{', '}', '[' and ']',
