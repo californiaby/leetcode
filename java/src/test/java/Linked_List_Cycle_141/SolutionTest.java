@@ -1,4 +1,4 @@
-package linked_list_cycle_141;
+package Linked_List_Cycle_141;
 
 import org.junit.Test;
 import utils.ListNode;
