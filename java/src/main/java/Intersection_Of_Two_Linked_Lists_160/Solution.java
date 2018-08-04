@@ -1,4 +1,4 @@
-package intersection_of_two_linked_lists_160;
+package Intersection_Of_Two_Linked_Lists_160;
 
 /*
 Write a program to find the node at which the intersection of two singly linked lists begins.
@@ -67,6 +67,7 @@ public class Solution {
 
     // iterated to the end and didn't find a match - return null
     return null;
+
   }
 
   /**

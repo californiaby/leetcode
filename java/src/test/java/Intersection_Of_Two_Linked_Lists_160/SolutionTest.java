@@ -1,4 +1,4 @@
-package intersection_of_two_linked_lists_160;
+package Intersection_Of_Two_Linked_Lists_160;
 
 import org.junit.Test;
 import utils.ListNode;
