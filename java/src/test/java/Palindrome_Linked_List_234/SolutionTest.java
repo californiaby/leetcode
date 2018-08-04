@@ -1,4 +1,4 @@
-package palindrome_linked_list_234;
+package Palindrome_Linked_List_234;
 
 import org.junit.Test;
 import utils.ListNode;

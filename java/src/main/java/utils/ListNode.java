@@ -13,12 +13,12 @@ public class ListNode {
 
   public String toString() {
     String s = "";
-//    ListNode n = this;
-//
-//    while (n != null) {
-//      s += (n.val + " ");
-//      n = n.next;
-//    }
+    ListNode n = this;
+
+    while (n != null) {
+      s += (n.val + " ");
+      n = n.next;
+    }
     return s;
   }
 
