@@ -23,7 +23,7 @@ public class Solution {
       result[i] *= tmp;
       tmp *= nums[i];
     }
-    
+
     return result;
   }
 
