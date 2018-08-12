@@ -1,5 +1,6 @@
 package book;
 
+import apple.laf.JRSUIUtils;
 import utils.TreeNode;
 
 /**
@@ -9,24 +10,27 @@ import utils.TreeNode;
 
 public class TreeSuccessor {
 
-//  public TreeNode getSuccessor(TreeNode n) {
-//
-//    if (n == null) return null;
-//
-//    // if there's right branch - get the leftmost element of it
-//    if (n.right != null) {
-//      return leftmost(n.right);
-//    } else {
-//      TreeNode q = n;
-//      TreeNode x = q.parent;
-//
-//      // Go up until we are on left instead of right
-//      while (x != null && x.left != q) {
-//        q = x;
-//        x = x = q.parent;
-//      }
-//      return x;
-//    }
-//  }
+  public TreeNode getSuccessor(TreeNode n) {
+
+    if (n == null) return null;
+
+    // if there's a right branch - return leftmost node
+    if (n.right != null) {
+      return leftMost(n.right);
+    } else {
+
+      // get the parent which has the processed node on the left side
+      TreeNode current = n;
+      TreeNode parent = current.parent;
+
+      while (parent != null && parent.left != current) {
+        current = parent;
+        parent = current.parent;
+      }
+
+      return parent;
+    }
+    
+  }
 
 }
