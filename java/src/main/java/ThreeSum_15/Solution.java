@@ -40,12 +40,18 @@ public class Solution {
     mergeSort(nums, 0, n);
 
     for (int i = 0; i < nums.length - 2; i++) {
-      if (nums[i] <= 0) {  // ignore non-negative values
-        if (i > 0 && nums[i] != nums[i - 1] || i == 0) { // ignore duplicates (already processed)
-          list.addAll(twoSum(nums, i));
-        }
+      if (i == 0 || nums[i] != nums[i-1]) { // skip duplicates
+        list.addAll((twoSum(nums, i)));
       }
     }
+
+//    for (int i = 0; i < nums.length - 2; i++) {
+//      if (nums[i] <= 0) {  // ignore non-negative values
+//        if (i > 0 && nums[i] != nums[i - 1] || i == 0) { // ignore duplicates (already processed)
+//          list.addAll(twoSum(nums, i));
+//        }
+//      }
+//    }
 
     return list;
   }
