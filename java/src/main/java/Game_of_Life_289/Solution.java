@@ -13,7 +13,7 @@ Write a function to compute the next state (after one update) of the board given
 
 public class Solution {
   public void gameOfLife(int[][] board) {
-    if (board == null || board.length == 0);
+    if (board == null || board.length == 0) return;
 
     int[][] next = new int[board.length][board[0].length];
 
@@ -63,6 +63,35 @@ public class Solution {
     }
 
     return n;
+  }
+
+  public void gameOfLifeBinary(int[][] board) {
+    if (board == null || board.length == 0) return;
+
+    // We'' use binary code to store current and next state. 0 == dead, 1 == live. 1st bit == next, 2nd == current
+    // Examples: 01: currently live, next dead. 11: currently live, next live.
+    // With this format all initial values are 00 or 01 - i.e. only with current state.
+    // 00 == 0; 01 == 1; 10 == 2; 11 = 3.
+
+    for (int i = 0; i < board.length; i++) {
+      for (int j = 0; j < board.length; j++) {
+        int n = countNeighboors(board, i, j);
+
+        if (board[i][j] == 1 && n >= 2 && n <= 3) {
+          board[i][j] = 3;
+        } else if (board[i][j] == 0 && n == 3) {
+          board[i][j] = 2;
+        }
+      }
+    }
+
+    // Iterate over board again and remove the last bit
+    for (int i = 0; i < board.length; i++) {
+      for (int j = 0; j < board.length; j++) {
+        board[i][j] >>= 1;
+      }
+    }
+
   }
 }
 
