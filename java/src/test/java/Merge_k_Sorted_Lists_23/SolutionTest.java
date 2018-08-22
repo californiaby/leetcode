@@ -26,8 +26,6 @@ public class SolutionTest {
   public void leet() {
     ListNode[] arr = new ListNode[] { null };
 
-    ListNode ans = new ListNode(1).add(2).add(3).add(4).add(5).add(6).add(8).add(10);
-
-    assertEquals(ans, solution.mergeKLists(arr));
+    assertEquals(null, solution.mergeKLists(arr));
   }
 }
