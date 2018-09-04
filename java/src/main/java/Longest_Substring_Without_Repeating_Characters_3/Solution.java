@@ -31,11 +31,10 @@ public class Solution {
     for (int end = 0; end < s.length(); end++) {
       char c = s.charAt(end);
       if (map.containsKey(c)) {
-        int current = end - start;
-        max = (max < current) ? current : max;
-        start = Math.max(start, map.get(c) + 1);
+        start = Math.max(start, map.get(c));
       }
-      map.put(c, end);
+      max = Math.max(max, end - start + 1);
+      map.put(c, end + 1);        // have to put + 1 to handle case when the last char of sub is the end of str
     }
     return max != 0 ? max : s.length();
   }
