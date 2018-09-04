@@ -33,4 +33,26 @@ public class Solution {
 
     return uid;
   }
+
+
+  public List<TreeNode> findDuplicateSubtreesMine(TreeNode root) {
+    Map<String, TreeNode> hash = new HashMap<>();
+    ans = new ArrayList<>();
+
+    doTheMagic(root, hash);
+    return ans;
+  }
+
+  private String doTheMagic(TreeNode root, Map<String, TreeNode> hash) {
+    if (root == null) return "#";
+    String code = root.val + "," + doTheMagic(root.left, hash) + "," + doTheMagic(root.right, hash);
+
+    if (hash.containsKey(code)) {
+      ans.add(root);
+    } else {
+      hash.put(code, root);
+    }
+
+    return code;
+  }
 }

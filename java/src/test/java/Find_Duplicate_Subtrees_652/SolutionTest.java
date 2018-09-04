@@ -25,4 +25,17 @@ public class SolutionTest {
 
     assertEquals(ans, solution.findDuplicateSubtrees(root));
   }
+
+  @Test
+  public void alternative() {
+    TreeNode root = new TreeNode(1);
+    root.addLeft(2);
+    root.addRight(3);
+    root.right.addLeft(1);
+    root.right.left.addLeft(2);
+
+    List<TreeNode> ans = Arrays.asList(root.left.left, root.left);
+
+    assertEquals(ans, solution.findDuplicateSubtreesMine(root));
+  }
 }
