@@ -22,4 +22,22 @@ public class Solution {
     return ans;
   }
 
+  public int mine(String s) {
+    if (s == null || s.length() == 0) return 0;
+    HashMap<Character, Integer> map = new HashMap<>();
+    int start = 0;
+    int max = 0;
+
+    for (int end = 0; end < s.length(); end++) {
+      char c = s.charAt(end);
+      if (map.containsKey(c)) {
+        int current = end - start;
+        max = (max < current) ? current : max;
+        start = Math.max(start, map.get(c) + 1);
+      }
+      map.put(c, end);
+    }
+    return max != 0 ? max : s.length();
+  }
+
 }
