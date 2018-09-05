@@ -61,4 +61,41 @@ public class Solution {
     return fakeCopyHead.next;
 
   }
+
+
+  /* ====== second ====== */
+
+  public RandomListNode copyRandomListTwo(RandomListNode head) {
+    if (head == null) return null;
+
+    HashMap<RandomListNode, RandomListNode> map = new HashMap<>();
+
+    RandomListNode fakeHead = new RandomListNode(-1);
+    fakeHead.next = head;
+    head = fakeHead;
+
+    RandomListNode copyHead = new RandomListNode(-1);
+    RandomListNode copy = copyHead;
+
+    while (head.next != null) {
+      copy.next = new RandomListNode(head.next.val);
+      head = head.next;
+      copy = copy.next;
+      map.put(head, copy);
+    }
+
+    head = fakeHead.next;
+    copy = copyHead.next;
+
+    while (head != null) {
+      if (head.random != null) {
+        copy.random = map.get(head.random);
+      }
+
+      head = head.next;
+      copy = copy.next;
+    }
+
+    return copyHead.next;
+  }
 }
