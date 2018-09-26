@@ -4,27 +4,28 @@ import utils.TreeNode;
 
 public class Solution {
   int ans;
+
   public int longestUnivaluePath(TreeNode root) {
+    if (root == null) return 0;
+
     ans = 0;
-    arrowLength(root);
+    getLength(root, root.val);
     return ans;
   }
 
-  private int arrowLength(TreeNode node) {
+  private int getLength(TreeNode node, int val) {
     if (node == null) return 0;
-    int left = arrowLength(node.left);
-    int right = arrowLength(node.right);
-    int arrowLeft = 0, arrowRight = 0;
+    int left = getLength(node.left, node.val);
+    int right = getLength(node.right, node.val);
 
-    if (node.left != null && node.left.val == node.val) {
-      arrowLeft = left + 1;
+    // Calc the path goin left-to-right through the node
+    ans = Math.max(ans, left + right);
+
+    // Return the length going up
+    if (val == node.val) {
+      return Math.max(left, right) + 1;
+    } else {
+      return 0;
     }
-
-    if (node.right != null && node.right.val == node.val) {
-      arrowRight = right + 1;
-    }
-
-    ans = Math.max(ans, arrowLeft + arrowRight);
-    return Math.max(arrowLeft, arrowRight);
   }
 }

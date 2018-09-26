@@ -12,13 +12,12 @@ public class SolutionTest {
   @Test
   public void longestUnivaluePath() {
     TreeNode tree = new TreeNode(1);
-    tree.addLeft(1);
-    tree.left.addLeft(1);
-    tree.addRight(2);
-    tree.right.addLeft(2);
-    tree.right.addRight(2);
-    tree.right.left.addRight(2);
+    tree.addRight(5);
+    tree.right.addRight(5);
+    tree.addLeft(4);
+    tree.left.addLeft(4);
+    tree.left.addRight(4);
 
-    assertEquals(3, solution.longestUnivaluePath(tree));
+    assertEquals(2, solution.longestUnivaluePath(tree));
   }
 }
