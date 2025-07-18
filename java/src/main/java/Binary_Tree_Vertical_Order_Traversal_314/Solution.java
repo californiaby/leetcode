@@ -1,12 +1,21 @@
 package Binary_Tree_Vertical_Order_Traversal_314;
 
+import java.util.ArrayDeque;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Queue;
+
+import utils.TreeNode;
+
 class Solution {
     public List<List<Integer>> verticalOrder(TreeNode root) {
-        List<List<Integer>> output = new ArrayList();
+        List<List<Integer>> output = new ArrayList<>();
         if (root == null) return output;
         
-        Map<Integer, ArrayList> columnTable = new HashMap();
-        Queue<Pair<TreeNode, Integer>> queue = new ArrayDeque();
+        Map<Integer, ArrayList<Integer>> columnTable = new HashMap<>();
+        Queue<Pair<TreeNode, Integer>> queue = new ArrayDeque<>();
         int column = 0;
         int min = 0;
         int max = 0;

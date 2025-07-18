@@ -1,7 +1,7 @@
 package book;
 
-import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Set;
 
 public class StringPalindromePermutation {
 
@@ -11,7 +11,7 @@ public class StringPalindromePermutation {
     // exception of one char that can be in the middle of palindrome).
 
     // Using set to track iterated characters. Add if it's not contained in the set, remove otherwise.
-    HashSet set = new HashSet();
+    Set<Character> set = new HashSet<>();
     char[] chars = s.toCharArray();
 
     for (int i = 0; i < chars.length; i++) {
